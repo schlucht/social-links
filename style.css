@@ -1,0 +1,103 @@
+:root {
+    --crl-primary: hsl(75, 94%, 57%);
+    --crl-white: hsl(0, 0%, 100%);
+    --crl-grey: hsl(0, 0%, 20%);
+    --crl-dark-grey: hsl(0, 0%, 12%);
+    --crl-off-black: hsl(0, 0%, 8%);
+
+    --ff: 'Inter', sans-serif;
+    --fw-400: 400;
+    --fw-600: 600;
+    --fw-700: 700;
+
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(./assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--ff);
+    font-size: 1.6rem;
+    font-weight: var(--fw-400);
+    color: var(--crl-white);
+    background-color: var(--crl-off-black);
+    line-height: 1.6;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--crl-dark-grey);
+    min-width: 30rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    @media (min-width: 768px) {
+        padding: 2rem 3rem;
+    }
+}
+img {
+    --img-size: 10rem;
+    width: var(--img-size);
+    height: var(--img-size);
+    border-radius: 50%;    
+}
+h1 {
+    font-size: 2.6rem;
+    font-weight: var(--fw-700);
+    margin: 1.6rem 0 0rem 0;
+}
+p {
+    font-size: 1.4rem;    
+}
+h1 + p{
+    color: var(--crl-primary);
+    margin-bottom: 1.6rem;
+    font-size: 1.6rem;
+    font-weight: var(--fw-400);
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2.4rem 0;
+    width: 100%;
+    & a {
+        padding: 1.0rem 0rem;
+        display: block;
+        background-color: var(--crl-grey);
+        color: var(--crl-white);
+        text-decoration: none;
+        text-align: center;
+        border-radius: 0.5rem;
+        width: 100%;
+        font-size: 1.4rem;
+        &:hover {
+            background-color: var(--crl-primary);
+            color: var(--crl-dark-grey);
+        }
+    }
+}
